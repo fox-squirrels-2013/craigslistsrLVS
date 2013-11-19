@@ -4,7 +4,6 @@ class PostsController < ApplicationController
     @post = Post.new
     @posts = Post.order(:category_id)
     @categories = Category.all
-    p @posts
   end
 
   def new
