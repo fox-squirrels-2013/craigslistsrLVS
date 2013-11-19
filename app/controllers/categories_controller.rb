@@ -6,7 +6,6 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    p params
     @category = Category.create(params[:category])
     redirect_to root_path
   end
@@ -27,7 +26,7 @@ class CategoriesController < ApplicationController
   
   def destroy
     Category.find(params[:id]).destroy
-    redirect_to category_path
+    redirect_to root_path
   end
   
 end
